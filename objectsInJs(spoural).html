@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object in js</title>
+    <style>
+        .output td{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h2>Spoural Registration</h2>
+    <table>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" id="name"></td>
+        </tr>
+        <tr>
+            <td>ID</td>
+            <td><input type="text" id="id_no"></td>
+        </tr>
+        <tr>
+            <td>Branch</td>
+            <td><input type="text" id="branch"></td>
+        </tr>
+        <tr>
+            <td>Event</td>
+            <td><input type="text" id="events"></td>
+        </tr>        
+    </table>
+    <br>
+    <input type="button" value="Submit" onclick="getDetails();">
+    <br><br>
+    <table class="output">
+        <tr>
+            <td>Name</td>
+            <td id="getName"></td>
+        </tr>
+        <tr>
+            <td>ID</td>
+            <td id="getId"></td>
+        </tr>
+        <tr>
+            <td>Branch</td>
+            <td id="getBranch"></td>
+        </tr>
+        <tr>
+            <td>Event</td>
+            <td id="getEvent"></td>
+        </tr>
+    </table>
+    <script src="./objectsInJs(spoural).js"></script>
+</body>
+</html>

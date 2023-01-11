@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Details</title>
+  <style>
+    table{
+      border: solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <label for="carType">Car Type:</label>
+    <input type="text" id="carType">
+  </div>
+  <div>
+    <label for="fuelType">Fuel Type:</label>
+    <input type="text" id="fuelType">
+  </div>
+  <br>
+  <br>
+  <div>
+    <label for="brand">Brand:</label>
+    <input type="text" id="brand">
+  </div>
+  <br>
+  <button onclick="checkCarDetails()">Get Car Details</button>
+  <br>
+  <div id="carCheckResult"></div>
+  <table>
+    <tr>
+      <td>Car</td>
+      <td>Fuel Type</td>
+      <td>Brand</td>
+    </tr>
+    <tr>
+      <td id="car"></td>
+      <td id="carFuel"></td>
+      <td id="carBrand"></td>
+    </tr>
+  </table>
+  <script src="./getCarDetails.js"></script>
+</body>
+
+</html>
