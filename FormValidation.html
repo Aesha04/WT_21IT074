@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <label>name </label><input type="text" id="name"> <span id="err"></span><br><br>
+    <label>email</label><input type="text" id="email"><span id="emailEr"></span><br><br>
+    <label>Subject</label><br>
+    <input type="checkbox" id="s1" value="wt">wt<br>
+    <input type="checkbox" id="s2" value="dsa">dsa<br>
+    <input type="checkbox" id="s3" value="dbms">dbms<br>
+    <input type="checkbox" id="s4" value="snt">snt<br>
+    <input type="checkbox" id="s5" value="comi">comi<br>
+    <input type="checkbox" id="s6" value="sgp">sgp<br>
+    <input type="button" value="submit" onclick="isValid();">
+    <script>
+        function isValid(){
+            let n = document.getElementById("name").value;
+            let e = document.getElementById("email").value;
+            if(n.length<=0){
+                document.getElementById("err").textContent="please enter name";
+            }
+            if(e.length<4){
+                document.getElementById("emailEr").textContent="please enter valid email";
+            }
+        }
+    </script>
+</body>
+</html>

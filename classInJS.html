@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class in Javascript</title>
+</head>
+<body>
+    <h3>Demonstrating Class in JS</h3>
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <br><br>
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id">
+        <br><br>
+        <form>
+            <label>Semester 1 SGPA: <input type="text" id="sem1"></label><br><br>
+            <label>Semester 2 SGPA: <input type="text" id="sem2"></label><br><br>
+            <label>Semester 3 SGPA: <input type="text" id="sem3"></label><br><br>
+            </form>
+          <button onclick="stuDetails()">Display</button><br><br>
+          <button onclick="calculateCGPA()">CGPA</button><br>
+      </div>
+      <div id="output"></div>
+      <p id="average"></p>
+      <script src="./classInJS.js"></script>
+</body>
+</html>

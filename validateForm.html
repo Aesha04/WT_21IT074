@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="userid">User ID</label>
+        <input type="text" name="userid" id="userid" required>
+        <span id="useridError"></span>
+        <br>
+        <br>
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required>
+        <span id="passwordError"></span>
+        <br>
+        <br>
+
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required>
+        <span id="nameError"></span>
+        <br>
+        <br>
+
+        <label for="address">Address</label>
+        <input type="text" name="address" id="address">
+        <br>
+        <br>
+
+        <label for="country">Country</label>
+        <select name="country" id="country" required>
+            <option value="india">India</option>
+            <option value="usa">USA</option>
+            <option value="uk">UK</option>
+        </select>
+        <br>
+        <br>
+
+        <label for="zipcode">Zip Code</label>
+        <input type="number" name="zipcode" id="zipcode" required>
+        <span id="zipcodeError"></span>
+        <br>
+        <br>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+        <span id="emailError"></span>
+        <br>
+        <br>
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Female</label>
+        <span id="genderError"></span>
+        <br>
+        <br>
+    
+        <label for="languages">Languages:</label>
+        <input type="checkbox" id="english" name="languages" value="english">
+        <label for="english">English</label>
+        <input type="checkbox" id="hindi" name="languages" value="hindi">
+        <label for="hindi">Hindi</label>
+        <input type="checkbox" id="gujarati" name="languages" value="gujarati">
+        <label for="gujarati">Gujarati</label>
+        <input type="checkbox" id="french" name="languages" value="french">
+        <label for="french">French</label>
+        <br>
+        <br>
+        
+        <label for="about">About Yourself</label>
+        <textarea name="about" id="about" cols="30" rows="10"></textarea>
+        <br>
+        <br>
+        
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        
+
+
+        var userid = document.getElementById("userid");
+        userid.addEventListener("blur", function(){
+            var useridError = document.getElementById("useridError");
+            if(userid.value.length < 5 || userid.value.length > 12){
+                useridError.innerHTML.textcolor(red) = "User id should be between 5 to 12 length";
+            }
+        });
+
+        
+        var password = document.getElementById("password");
+        password.addEventListener("blur", function(){
+            var passwordError = document.getElementById("passwordError");
+            if(password.value.length < 7 || password.value.length > 12){
+                passwordError.innerHTML = "Password should be between 7 to 12 length";
+            }
+        });
+        var name = document.getElementById("name");
+        name.addEventListener("blur", function(){
+            var nameError = document.getElementById("nameError");
+            var regex = /^[a-zA-Z]+$/;
+            if(!regex.test(name.value)){
+                nameError.innerHTML = "Name should be alphabet only";
+            }
+        });
+        var email = document.getElementById("email");
+        email.addEventListener("blur", function(){
+            var emailError = document.getElementById("emailError");
+            var regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            if(!regex.test(email.value)){
+                emailError.innerHTML = "Email should be valid email id";
+            }
+        });
+ 
+        
+
+        </script>
+</body>
+</html>

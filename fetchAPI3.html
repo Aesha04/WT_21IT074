@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch api</title>
+</head>
+<body>
+    <ul id="universities-list"></ul>
+
+    <script>
+      const universitiesList = document.getElementById("universities-list");
+      async function fetchUniversities() {
+        const response = await fetch("http://universities.hipolabs.com/search?country=India");
+        const data = await response.json();
+        data.forEach(university => {
+        const listItem = document.createElement("li");
+        listItem.textContent = university.name;
+        universitiesList.appendChild(listItem);
+        });
+    }
+    fetchUniversities();
+    </script>
+</body>
+</html>
